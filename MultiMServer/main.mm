@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Server.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        MediaServer *server = [[MediaServer alloc] initOnPort:1930 serverType:SERVERTYPEDATA];
+        NSLog(@"Starting the server");
     }
     return 0;
 }
